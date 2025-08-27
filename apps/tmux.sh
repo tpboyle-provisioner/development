@@ -14,12 +14,13 @@ ensure_tmuxify_is_installed () {
 
 tmuxify_is_installed () {
   ls /usr/local/bin | grep -q tmuxify
-  return $?
 }
 
 install_tmuxify () {
   info "tmux" "Installing tmuxify..."
+  cd /tmp
   wget https://raw.githubusercontent.com/tonchis/tmuxify/v1.2.1/bin/tmuxify &> /dev/null
   chmod +x tmuxify
   sudo mv tmuxify /usr/local/bin
+  cd -
 }

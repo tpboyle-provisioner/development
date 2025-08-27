@@ -8,7 +8,6 @@ apt_install () {
 apt_package_is_installed () {
   package="$1"
   dpkg -l | grep -q "^ii\s\+$package "
-  return $?
 }
 
 apt_ensure_package_is_installed () {

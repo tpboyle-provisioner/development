@@ -16,7 +16,6 @@ ensure_dotfiles_are_installed () {
 
 dotfiles_are_installed () {
   test -d "$DOTFILES_DIR"
-  return $?
 }
 
 install_dotfiles () {
@@ -30,8 +29,7 @@ install_dotfiles () {
 }
 
 dotfiles_repo_is_defined () {
-  declare -p DOTFILES_REPO &>/dev/null
-  return $?
+  declare -p DOTFILES_REPO &> /dev/null
 }
 
 ensure_dotfiles_are_latest () {

@@ -17,7 +17,6 @@ ensure_vim_plug_is_installed () {
 
 vim_plug_is_installed () {
   test -f "$VIM_PLUG_PATH"
-  return $?
 }
 
 install_vim_plug () {
