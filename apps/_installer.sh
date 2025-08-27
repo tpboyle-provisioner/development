@@ -1,11 +1,14 @@
 
-source "apps/essentials.sh"
-source "apps/git.sh"
-source "apps/vim.sh"
-source "apps/python.sh"
-source "apps/tmux.sh"
-source "apps/dotfiles.sh"
-source "apps/fzf.sh"
+# Get current directory
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+source "$DIR/essentials.sh"
+source "$DIR/git.sh"
+source "$DIR/vim.sh"
+source "$DIR/python.sh"
+source "$DIR/tmux.sh"
+source "$DIR/dotfiles.sh"
+source "$DIR/fzf.sh"
 
 all_development_apps_are_provisioned () {
   ensure_build_essentials_are_installed

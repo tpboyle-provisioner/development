@@ -3,24 +3,25 @@
 
 # LOCATE PROJECT ROOT
 
-ROOT_DIR=$(dirname -- "${BASH_SOURCE[0]}")
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 
 # SOURCES
 
-source "./conf.sh"
 source "src/logger.sh"
-source "apps/_installer.sh"
+source "$DIR/apps/_installer.sh"
+
+[ -f "$DIR/conf.sh" ] && source "$DIR/conf.sh"
 
 
 # HELPERS
 
 log_header () {
-  info "main" "---- Starting provisioning... ----"
+  info "development" "---- Starting <<DEVELOPMENT>> provisioning... ----"
 }
 
 log_footer () {
-  info "main" "---- ...provisioning complete. ----"
+  info "development" "---- ...<<DEVELOPMENT>> provisioning complete. ----"
 }
 
 
