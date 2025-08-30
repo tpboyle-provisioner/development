@@ -7,7 +7,6 @@ ensure_dotfiles_are_provisioned () {
   run_dotfiles_linker
 }
 
-
 ensure_dotfiles_are_installed () {
   if ! dotfiles_are_installed; then
     install_dotfiles
@@ -15,7 +14,7 @@ ensure_dotfiles_are_installed () {
 }
 
 dotfiles_are_installed () {
-  test -d "$DOTFILES_DIR"
+  test -d "$DOTFILES_DIR/.git"
 }
 
 install_dotfiles () {

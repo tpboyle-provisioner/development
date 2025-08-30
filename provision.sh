@@ -3,15 +3,15 @@
 
 # LOCATE PROJECT ROOT
 
-DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DEVELOPMENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 
 # SOURCES
 
 source "src/logger.sh"
-source "$DIR/apps/_installer.sh"
+source "$DEVELOPMENT_DIR/apps/_installer.sh"
 
-[ -f "$DIR/conf.sh" ] && source "$DIR/conf.sh"
+[ -f "$DEVELOPMENT_DIR/conf.sh" ] && source "$DEVELOPMENT_DIR/conf.sh"
 
 
 # HELPERS
