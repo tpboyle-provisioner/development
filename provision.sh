@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-# LOCATE PROJECT ROOT
+# LOCATE MODULE ROOT
 
 DEVELOPMENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
@@ -9,7 +9,7 @@ DEVELOPMENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # SOURCES
 
 source "src/logger.sh"
-source "$DEVELOPMENT_DIR/apps/_installer.sh"
+source "$DEVELOPMENT_DIR/apps/_all.sh"
 
 [ -f "$DEVELOPMENT_DIR/conf.sh" ] && source "$DEVELOPMENT_DIR/conf.sh"
 
@@ -17,11 +17,11 @@ source "$DEVELOPMENT_DIR/apps/_installer.sh"
 # HELPERS
 
 log_header () {
-  info "development" "---- Starting <<DEVELOPMENT>> provisioning... ----"
+  info "development" "Checking _development_ provisioning..."
 }
 
 log_footer () {
-  info "development" "---- ...<<DEVELOPMENT>> provisioning complete. ----"
+  info "development" "... _development_ provisioning complete."
 }
 
 
@@ -43,4 +43,3 @@ main () {
 if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
   main "$@"
 fi
-
