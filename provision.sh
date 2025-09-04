@@ -1,5 +1,7 @@
 #!/bin/bash
 
+SRC_URL="https://github.com/tpboyle-provisioner/src.git"
+
 
 # LOCATE MODULE ROOT
 
@@ -40,6 +42,14 @@ main () {
   log_footer
 }
 
+
+# BOOTSTRAP
+
+bootstrap () {
+  [[ ! -d ./src ]] && git clone "$SRC_URL" ./src &> /dev/null
+}
+
 if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
+  bootstrap
   main "$@"
 fi
