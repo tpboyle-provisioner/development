@@ -1,11 +1,21 @@
+#!/bin/bash
+
+
+# CONFIG
 
 DOTFILES_DIR="$HOME/.dotfiles"
+
+
+# INTERFACE
 
 ensure_dotfiles_are_provisioned () {
   ensure_dotfiles_are_installed
   ensure_dotfiles_are_latest
   run_dotfiles_linker
 }
+
+
+# IMPLEMENTATION
 
 ensure_dotfiles_are_installed () {
   if ! dotfiles_are_installed; then

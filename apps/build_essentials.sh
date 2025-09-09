@@ -1,3 +1,4 @@
+#!/bin/bash
 
 source "src/packages/apt.sh"
 

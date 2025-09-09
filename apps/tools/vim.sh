@@ -1,13 +1,26 @@
+#!/bin/bash
+
+
+# SOURCES
 
 source "src/packages/apt.sh"
 
+
+# CONSTANTS
+
 VIM_PLUG_PATH="$HOME/.vim/autoload/plug.vim"
 VIM_PLUG_URL="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+
+
+# INTERFACE
 
 ensure_vim_is_installed () {
   apt_ensure_package_is_installed vim
   ensure_vim_plug_is_installed vim-plug
 }
+
+
+# IMPLEMENTATION
 
 ensure_vim_plug_is_installed () {
   if ! vim_plug_is_installed; then

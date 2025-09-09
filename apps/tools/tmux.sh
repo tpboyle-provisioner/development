@@ -1,10 +1,20 @@
+#!/bin/bash
+
+
+# SOURCES
 
 source "src/packages/apt.sh"
+
+
+# INTERFACE
 
 ensure_tmux_is_installed () {
   apt_ensure_package_is_installed tmux
   ensure_tmuxify_is_installed
 }
+
+
+# IMPLEMENTATION
 
 ensure_tmuxify_is_installed () {
   if ! tmuxify_is_installed; then

@@ -1,11 +1,21 @@
+#!/bin/bash
+
+
+# SOURCES
 
 source "src/packages/apt.sh"
+
+
+# INTERFACE
 
 ensure_fzf_is_installed () {
   if ! fzf_is_installed; then
     install_fzf
   fi
 }
+
+
+# IMPLEMENTATION
 
 fzf_is_installed () {
   test -d ~/.fzf/bin
