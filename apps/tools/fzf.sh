@@ -1,11 +1,6 @@
 #!/bin/bash
 
 
-# SOURCES
-
-source "src/packages/apt.sh"
-
-
 # INTERFACE
 
 ensure_fzf_is_installed () {

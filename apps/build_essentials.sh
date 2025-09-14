@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "src/packages/apt.sh"
+source "src/packages/apt/packages.sh"
 
 ensure_build_essentials_are_installed () {
   apt_ensure_packages_are_installed \

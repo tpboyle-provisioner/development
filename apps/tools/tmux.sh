@@ -3,7 +3,7 @@
 
 # SOURCES
 
-source "src/packages/apt.sh"
+source "src/packages/apt/packages.sh"
 
 
 # INTERFACE
