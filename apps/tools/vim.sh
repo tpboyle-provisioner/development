@@ -8,7 +8,7 @@ source "src/packages/apt/packages.sh"
 
 # CONSTANTS
 
-VIM_PLUG_PATH="$HOME/.vim/autoload/plug.vim"
+VIM_PLUG_PATH="/home/$USER/.vim/autoload/plug.vim"
 VIM_PLUG_URL="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 
 

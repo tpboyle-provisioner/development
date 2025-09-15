@@ -3,7 +3,7 @@
 
 # CONFIG
 
-DOTFILES_DIR="$HOME/.dotfiles"
+DOTFILES_DIR="/home/$USER/.dotfiles"
 
 
 # INTERFACE
